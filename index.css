@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"),
+    url(assets/fonts/TTLakes-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"),
+    url(assets/fonts/TTLakes-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"), url(assets/fonts/TTLakes-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  background: #f8f8f8;
+  color: #1b1c21;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  height: 88px;
+}
+
+.logo__button {
+  background: transparent;
+  border: white;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+.list li:nth-child(4) {
+  position: fixed;
+  right: 100px;
+}
+
+.list li:nth-child(5) {
+  position: fixed;
+  right: 20px;
+}
+
+.logo__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #eaeaea;
+  width: 2px;
+  height: 32px;
+  top: 35px;
+  left: 210px;
+}
+
+.logo:hover {
+  opacity: 50%;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+
+.list__button--open_modal,
+.list__button--open-popup {
+  background-color: #ff3e79;
+  border-radius: 50%;
+  padding: 10px;
+  border: #ff3e79;
+  width: 20px;
+  height: 20px;
+}
+
+.list__button {
+  background-color: #ff3e79;
+  border-radius: 50%;
+  padding: 10px;
+  border: #ff3e79;
+  width: 40px;
+  height: 40px;
+}
+
+.list__button:hover,
+.list__button--open_modal:hover,
+.logo__button:hover,
+.list__button--open-popup:hover {
+  opacity: 0.7;
+}
+
+.main-title {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 28px;
+}
+
+.main-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #41f6d7;
+  top: 115px;
+  left: 4px;
+  width: 4px;
+  height: 40px;
+}
+
+.info {
+  background-color: #f8f8f8;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.options-for-client {
+  display: flex;
+  flex-direction: row;
+  color: #7e7e82;
+  overflow-x: scroll;
+  font-size: 16px;
+}
+
+.options-for-client ul {
+  display: flex;
+  white-space: nowrap;
+}
+
+.options-for-client li {
+  margin-right: 100px;
+  border: 1px solid transparent;
+  padding: 3px;
+}
+
+.options-for-client__repair:hover,
+.options-for-client__other-options:hover,
+.options-for-client__price:hover,
+.options-for-client__adress:hover,
+.options-for-client__special-price:hover,
+.options-for-client__comment:hover {
+  border: 1px solid #41f6d7;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+}
+
+.promo {
+  color: #1b1c21;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.addinfo {
+  font-size: 16px;
+}
+
+.read-next {
+  background: transparent;
+  border: white;
+  width: 150px;
+  font-size: 14px;
+  font-family: inherit;
+  padding-left: 5px;
+}
+
+.read-next:hover {
+  opacity: 0.7;
+}
+
+.addinfopic {
+  float: left;
+  position: relative;
+  top: 6px;
+  margin-right: 3px;
+}
+
+.promocontainer {
+  width: 500px;
+}
+
+.group-picture {
+  width: 320px;
+  height: 176px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.list li:nth-child(1),
+.list li:nth-child(2),
+.list li:nth-child(3) {
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .logo__button::after {
+    display: none;
+  }
+
+  .logo__button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #eaeaea;
+    width: 2px;
+    height: 32px;
+    top: 35px;
+    left: 60px;
+  }
+
+  .show_all {
+    visibility: visible;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  .list li:nth-child(1),
+  .list li:nth-child(2),
+  .list li:nth-child(3) {
+    visibility: visible;
+    position: relative;
+    left: 250px;
+    margin-left: 10px;
+  }
+
+  .list li:nth-child(4) {
+    margin-right: -20px;
+  }
+
+  .list li:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #eaeaea;
+    width: 2px;
+    height: 32px;
+    top: 5px;
+    left: 60px;
+  }
+
+  .group-picture {
+    width: 360px;
+    height: 208px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    background: #f8f8f8;
+  }
+  .group-picture {
+    width: 531.35px;
+    height: 307px;
+  }
+
+  .main-title {
+    position: relative;
+    bottom: 80px;
+    left: 25px;
+  }
+
+  .main-title::before {
+    top: 0;
+    left: -40px;
+  }
+
+  .options-for-client,
+  .promo {
+    overflow-x: hidden;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .options-for-client ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .options-for-client li {
+    margin-right: 20px;
+  }
+
+  .promo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 20px;
+  }
+
+  .list li:nth-child(1),
+  .list li:nth-child(2),
+  .list li:nth-child(3) {
+    visibility: hidden;
+  }
+
+  .list li:nth-child(4) {
+    right: 250px;
+  }
+
+  .list__button--open_modal,
+  .logo {
+    display: none;
+  }
+
+  .list li:nth-child(4) {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .list li:nth-child(5) {
+    position: absolute;
+    top: 40px;
+    right: 250px;
+  }
+
+  .list li:nth-child(4)::before {
+    content: "Оставить заявку";
+    position: relative;
+    bottom: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .list li:nth-child(5)::before {
+    content: "Статус ремонта";
+    position: relative;
+    bottom: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
